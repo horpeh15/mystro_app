@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO: edit the title and description. Keep the title under 60 characters, description under 160. -->
+<title>MystroBank | Payment Details &amp; Services</title>
+<meta name="description" content="Find the official account details for paying MystroBank, see our services and prices, and contact us on WhatsApp.">
+<meta name="theme-color" content="#2a1240">
+<!-- Fonts: if you remove this line the site still works with fallback fonts. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== 1. COLOURS & SIZES - change these and the whole site updates ===== */
+:root{
+  --plum:#2a1240;      /* main dark colour */
+  --plum-soft:#3d2159; /* lighter plum for cards */
+  --gold:#f2b632;      /* accent / buttons */
+  --mint:#bff0d4;      /* playful highlight */
+  --paper:#fbf8f3;     /* page background */
+  --ink:#1c1226;       /* body text */
+  --muted:#6b6275;     /* secondary text */
+  --radius:18px;
+  --head:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+/* ===== 2. BASE STYLES ===== */
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:1.05rem}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,5vw,2.8rem);margin-bottom:.6rem}
+p{max-width:62ch}
+.wrap{width:min(1100px,92%);margin-inline:auto}
+section{padding:4.5rem 0}
+.lead{color:var(--muted);margin-bottom:2rem}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;background:var(--gold);padding:.6rem 1rem;z-index:99}
+.skip:focus{left:1rem;top:1rem}
+
+/* Buttons */
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--plum)}
+.btn-line{border-color:currentColor}
+.btn-wa{background:#1fa855;color:#fff}
+
+/* ===== 3. HEADER / NAV ===== */
+header{background:var(--plum);color:#fff;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.logo{font-family:var(--head);font-weight:800;font-size:1.4rem;text-decoration:none}
+.logo span{color:var(--gold)}
+nav ul{list-style:none;display:flex;gap:1.4rem;padding:0}
+nav a{text-decoration:none;font-weight:500;opacity:.9}
+nav a:hover{opacity:1;color:var(--gold)}
+.menu-btn{display:none;background:none;border:2px solid #fff;color:#fff;border-radius:10px;padding:.4rem .8rem;font:inherit;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;left:0;right:0;top:100%;background:var(--plum);flex-direction:column;padding:1rem 4%;gap:1rem}
+  nav ul.open{display:flex}
+}
+
+/* ===== 4. HERO WITH ACCOUNT CARD ===== */
+.hero{background:var(--plum);color:#fff;padding:4rem 0 5rem}
+.hero .wrap{display:grid;gap:3rem;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr 1fr}}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);margin-bottom:1rem}
+.hero p{opacity:.88;margin-bottom:1.6rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* The account card - this is the star of the page */
+.account{background:var(--paper);color:var(--ink);border-radius:26px;padding:1.8rem;box-shadow:0 24px 60px rgba(0,0,0,.35);border-top:8px solid var(--gold)}
+.account h2{font-size:1.4rem;margin-bottom:1rem}
+.row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 0;border-bottom:1px dashed #d9d2c6}
+.row:last-of-type{border:0}
+.row small{display:block;color:var(--muted);font-size:.82rem}
+.row strong{font-size:1.15rem;word-break:break-all}
+.copy{background:var(--mint);border:0;border-radius:999px;padding:.45rem .9rem;font:inherit;font-weight:700;font-size:.85rem;cursor:pointer;white-space:nowrap}
+.copy:hover{background:var(--gold)}
+.safe{margin-top:1rem;font-size:.9rem;background:#fff3d6;border-radius:12px;padding:.8rem 1rem}
+
+/* ===== 5. ABOUT ===== */
+.about .wrap{display:grid;gap:2rem}
+@media(min-width:800px){.about .wrap{grid-template-columns:1fr 1fr;align-items:center}}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fact{background:var(--mint);border-radius:var(--radius);padding:1.2rem}
+.fact b{font-family:var(--head);font-size:2rem;display:block}
+
+/* ===== 6. SERVICES & PRICES ===== */
+.services{background:#fff}
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{border:2px solid var(--plum);border-radius:var(--radius);padding:1.6rem;display:flex;flex-direction:column;gap:.6rem}
+.card.featured{background:var(--plum);color:#fff;border-color:var(--plum)}
+.price{font-family:var(--head);font-size:2rem;font-weight:800}
+.card.featured .price{color:var(--gold)}
+.card ul{padding-left:1.1rem;flex:1}
+
+/* ===== 7. GALLERY (swap the coloured tiles for real photos - see comment in HTML) ===== */
+.gallery-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.tile{aspect-ratio:4/3;border-radius:var(--radius);display:flex;align-items:flex-end;padding:1rem;font-weight:700;color:var(--plum);overflow:hidden;position:relative}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile span{position:relative;background:rgba(255,255,255,.85);padding:.2rem .7rem;border-radius:999px}
+.t1{background:var(--gold)}.t2{background:var(--mint)}.t3{background:#e7c9ff}.t4{background:#ffc9b8}.t5{background:#c9dcff}.t6{background:#ffe9a6}
+
+/* ===== 8. TESTIMONIALS ===== */
+.testimonials{background:var(--plum);color:#fff}
+.quote{background:var(--plum-soft);border-radius:var(--radius);padding:1.5rem}
+.quote cite{display:block;margin-top:.8rem;color:var(--gold);font-style:normal;font-weight:700}
+
+/* ===== 9. CONTACT ===== */
+.contact .wrap{display:grid;gap:2rem}
+@media(min-width:850px){.contact .wrap{grid-template-columns:1fr 1fr}}
+form{display:grid;gap:.9rem}
+label{font-weight:700;font-size:.95rem}
+input,textarea{width:100%;padding:.8rem 1rem;border:2px solid #cfc7ba;border-radius:12px;font:inherit;background:#fff}
+input:focus,textarea:focus{border-color:var(--plum);outline:0}
+.map{border:0;width:100%;height:260px;border-radius:var(--radius);margin-top:1rem}
+.msg{font-weight:700;color:#127a3d}
+
+/* ===== 10. FOOTER ===== */
+footer{background:var(--ink);color:#d8d0e2;padding:2rem 0;font-size:.9rem}
+
+/* Respect people who turn animations off */
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home">Mystro<span>Bank</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav aria-label="Main">
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== HOME / HERO ===== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <h1>Pay us the right way, in under a minute.</h1>
+      <p>Our official account details are on this page. Copy them, make your transfer, then send us your receipt on WhatsApp so we can confirm it quickly.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#pay">See account details</a>
+        <!-- EDIT: replace 2348000000000 with your number (country code, no + or spaces) -->
+        <a class="btn btn-line" href="https://wa.me/2348000000000?text=Hello%2C%20I%20just%20made%20a%20payment." target="_blank" rel="noopener">Send receipt on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- ACCOUNT CARD: replace every value below with your REAL details -->
+    <div class="account" id="pay">
+      <h2>Payment details</h2>
+      <div class="row">
+        <div><small>Bank name</small><strong id="v-bank">Your Bank Name</strong></div>
+        <button class="copy" data-copy="v-bank">Copy</button>
+      </div>
+      <div class="row">
+        <div><small>Account name</small><strong id="v-name">MystroBank Ltd</strong></div>
+        <button class="copy" data-copy="v-name">Copy</button>
+      </div>
+      <div class="row">
+        <div><small>Account number</small><strong id="v-num">0123456789</strong></div>
+        <button class="copy" data-copy="v-num">Copy</button>
+      </div>
+      <p class="safe"><b>Stay safe:</b> only pay to the details shown here. We never change account numbers by chat or email. If in doubt, call us first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <h2>About us</h2>
+      <!-- EDIT: write your real story here. Only claim licences or registrations you actually hold. -->
+      <p>We make paying simple and clear. One account, one page, no confusion. Every payment is checked by a real person and confirmed to you the same day.</p>
+      <p style="margin-top:1rem">Tell people who you are, how long you have been trading, and what they can expect after they pay.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>5 min</b>Average confirmation time</div>
+      <div class="fact"><b>24/7</b>WhatsApp support</div>
+      <div class="fact"><b>1,000+</b>Payments received</div>
+      <div class="fact"><b>100%</b>Receipts issued</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES & PRICES ===== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <h2>Services and prices</h2>
+    <p class="lead">Placeholder items. Replace the names, prices and bullet points with your own.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Starter</h3>
+        <div class="price">₦5,000</div>
+        <ul><li>Single payment</li><li>Receipt by WhatsApp</li><li>Confirmation in 1 hour</li></ul>
+        <a class="btn btn-gold" href="#pay">Pay now</a>
+      </article>
+      <article class="card featured">
+        <h3>Standard</h3>
+        <div class="price">₦25,000</div>
+        <ul><li>Priority confirmation</li><li>Receipt by email and WhatsApp</li><li>Dedicated support</li></ul>
+        <a class="btn btn-gold" href="#pay">Pay now</a>
+      </article>
+      <article class="card">
+        <h3>Premium</h3>
+        <div class="price">₦100,000</div>
+        <ul><li>Same-day confirmation</li><li>Personal account manager</li><li>Monthly statement</li></ul>
+        <a class="btn btn-gold" href="#pay">Pay now</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY =====
+  To use real photos: put images in the same folder as this file, then change a tile to:
+  <div class="tile"><img src="photo1.jpg" alt="Describe the photo"><span>Caption</span></div> -->
+<section id="gallery">
+  <div class="wrap">
+    <h2>Gallery</h2>
+    <p class="lead">A look at our team, our office and our happy customers.</p>
+    <div class="gallery-grid">
+      <div class="tile t1"><span>Our office</span></div>
+      <div class="tile t2"><span>The team</span></div>
+      <div class="tile t3"><span>Customer day</span></div>
+      <div class="tile t4"><span>Launch event</span></div>
+      <div class="tile t5"><span>Community</span></div>
+      <div class="tile t6"><span>Behind the scenes</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS =====
+  IMPORTANT: these are sample quotes. Replace with real customer words (with permission) before going live. -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <h2>What customers say</h2>
+    <div class="grid">
+      <blockquote class="quote">“Clear details, quick confirmation. I knew exactly where to send my money.”<cite>Sample Customer, Lagos</cite></blockquote>
+      <blockquote class="quote">“The copy buttons saved me from typing mistakes. Very easy.”<cite>Sample Customer, Abuja</cite></blockquote>
+      <blockquote class="quote">“They replied on WhatsApp within minutes of my receipt.”<cite>Sample Customer, Ibadan</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Contact us</h2>
+      <!-- EDIT: your real phone, WhatsApp and address -->
+      <p><b>Phone:</b> <a href="tel:+2348000000000">+234 800 000 0000</a></p>
+      <p><b>WhatsApp:</b> <a href="https://wa.me/2348000000000" target="_blank" rel="noopener">Chat with us</a></p>
+      <p><b>Email:</b> <a href="mailto:hello@example.com">hello@example.com</a></p>
+      <p><b>Address:</b> 1 Sample Street, Lagos, Nigeria</p>
+      <!-- MAP: in Google Maps click Share > Embed a map > copy the src="..." link and paste it below -->
+      <iframe class="map" title="Our location on a map" loading="lazy"
+        src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed"></iframe>
+    </div>
+
+    <!-- CONTACT FORM
+      Right now it opens the visitor's email app (works with no server).
+      For real form delivery, sign up at formspree.io and use their URL as the form's action. -->
+    <form id="contact-form" aria-label="Contact form">
+      <h2 style="font-size:1.6rem">Send a message</h2>
+      <div><label for="name">Your name</label><input id="name" name="name" required autocomplete="name"></div>
+      <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+      <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+      <button class="btn btn-gold" type="submit">Send message</button>
+      <p class="msg" id="form-msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="year">2026</span> MystroBank. All rights reserved.</p>
+    <!-- EDIT: add your registration or licence details here if you have them -->
+  </div>
+</footer>
+
+<script>
+/* ===== JAVASCRIPT (small helpers) ===== */
+
+// Mobile menu open/close
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.getElementById('menu');
+menuBtn.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+});
+menu.addEventListener('click', e => { if (e.target.tagName === 'A') menu.classList.remove('open'); });
+
+// Copy buttons: copies the text from the element named in data-copy
+document.querySelectorAll('.copy').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = document.getElementById(btn.dataset.copy).textContent.trim();
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'Copied!';
+    } catch (err) {
+      btn.textContent = 'Press Ctrl+C';  // fallback if the browser blocks copying
+    }
+    setTimeout(() => btn.textContent = 'Copy', 1800);
+  });
+});
+
+// Contact form: opens the visitor's email app with the message filled in
+// EDIT: change hello@example.com to your email
+document.getElementById('contact-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target;
+  const body = encodeURIComponent(f.message.value + '\n\nFrom: ' + f.name.value + ' (' + f.email.value + ')');
+  window.location.href = 'mailto:hello@example.com?subject=' + encodeURIComponent('Website message from ' + f.name.value) + '&body=' + body;
+  document.getElementById('form-msg').textContent = 'Opening your email app...';
+});
+
+// Footer year updates itself
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
